@@ -1,0 +1,2 @@
+## Sumador completo
+A diferencia el circuito de medio sumador, este circuito considera un acarreo de entrada junto con los bits de los números $A$ y $B$, permitiendo extender el uso de este diseño a sumadores de n-bits.
