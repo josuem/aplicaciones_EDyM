@@ -1,0 +1,72 @@
+% Important: If latex complains about unicode characters, please use "\usepackage[utf8x]{inputenc}" in your preamble
+% You can change the size of the picture by putting it into the construct:
+% 1) \resizebox{10cm}{!}{"below picture"} to scale horizontally to 10 cm
+% 2) \resizebox{!}{15cm}{"below picture"} to scale vertically to 15 cm
+% 3) \resizebox{10cm}{15cm}{"below picture"} a combination of above two
+% It is not recomended to use the scale option of the tikzpicture environment.
+\begin{tikzpicture}[x=1pt,y=-1pt,line cap=rect]
+\def\logisimfontA#1{\fontfamily{cmr}{#1}} % Replaced by logisim, original font was "SansSerif"
+\def\logisimfontB#1{\fontfamily{cmtt}{#1}} % Replaced by logisim, original font was "Monospaced"
+\definecolor{custcol_0_0_0}{RGB}{0, 0, 0}
+\definecolor{custcol_ff_ff_ff}{RGB}{255, 255, 255}
+\draw [line width=3.0pt, custcol_0_0_0 ]  (302.0,145.0) -- (332.0,145.0) ;
+\draw [line width=3.0pt, custcol_0_0_0 ]  (312.0,35.0) -- (332.0,35.0) ;
+\draw [line width=3.0pt, custcol_0_0_0 ]  (142.0,155.0) -- (142.0,195.0) -- (192.0,195.0) ;
+\draw [line width=3.0pt, custcol_0_0_0 ]  (122.0,95.0) -- (192.0,95.0) ;
+\draw [line width=3.0pt, custcol_0_0_0 ]  (112.0,95.0) -- (122.0,95.0) -- (122.0,135.0) -- (192.0,135.0) ;
+\draw [line width=3.0pt, custcol_0_0_0 ]  (162.0,115.0) -- (162.0,175.0) -- (192.0,175.0) ;
+\fill [line width=3.0pt, custcol_0_0_0]  (162.0,35.0) ellipse (5.0 and 5.0 );
+\fill [line width=3.0pt, custcol_0_0_0]  (72.0,15.0) ellipse (5.0 and 5.0 );
+\fill [line width=3.0pt, custcol_0_0_0]  (142.0,155.0) ellipse (5.0 and 5.0 );
+\fill [line width=3.0pt, custcol_0_0_0]  (162.0,115.0) ellipse (5.0 and 5.0 );
+\fill [line width=3.0pt, custcol_0_0_0]  (122.0,95.0) ellipse (5.0 and 5.0 );
+\fill [line width=3.0pt, custcol_0_0_0]  (142.0,55.0) ellipse (5.0 and 5.0 );
+\draw [line width=3.0pt, custcol_0_0_0 ]  (57.0,15.0) -- (62.0,15.0) -- (72.0,15.0) ;
+\draw [line width=2.0pt, custcol_0_0_0 ]  (47.0,24.0) -- (57.0,15.0) -- (47.0,6.0) -- (23.0,6.0) -- (23.0,24.0) -- cycle;
+
+\logisimfontA{\fontsize{16pt}{16pt}\fontseries{bx}\selectfont\node[inner sep=0, outer sep=0, custcol_0_0_0, anchor=base west] at  (9.0,23.0)  {A};}
+\fill [line width=2.0pt, custcol_0_0_0]  (62.0,15.0) ellipse (2.0 and 2.0 );
+\draw [line width=3.0pt, custcol_0_0_0 ]  (57.0,35.0) -- (62.0,35.0) -- (162.0,35.0) -- (162.0,115.0) -- (192.0,115.0) ;
+\draw [line width=2.0pt, custcol_0_0_0 ]  (47.0,44.0) -- (57.0,35.0) -- (47.0,26.0) -- (23.0,26.0) -- (23.0,44.0) -- cycle;
+
+\logisimfontA{\fontsize{16pt}{16pt}\fontseries{bx}\selectfont\node[inner sep=0, outer sep=0, custcol_0_0_0, anchor=base west] at  (8.0,43.0)  {B};}
+\fill [line width=2.0pt, custcol_0_0_0]  (62.0,35.0) ellipse (2.0 and 2.0 );
+\draw [line width=3.0pt, custcol_0_0_0 ]  (57.0,55.0) -- (62.0,55.0) -- (142.0,55.0) ;
+\draw [line width=2.0pt, custcol_0_0_0 ]  (47.0,64.0) -- (57.0,55.0) -- (47.0,46.0) -- (23.0,46.0) -- (23.0,64.0) -- cycle;
+
+\logisimfontA{\fontsize{16pt}{16pt}\fontseries{bx}\selectfont\node[inner sep=0, outer sep=0, custcol_0_0_0, anchor=base west] at  (5.0,63.0)  {Pi};}
+\fill [line width=2.0pt, custcol_0_0_0]  (62.0,55.0) ellipse (2.0 and 2.0 );
+\draw [line width=3.0pt, custcol_0_0_0 ]  (162.0,35.0) -- (192.0,35.0) -- (194.0,35.0) ;
+\draw [line width=3.0pt, custcol_0_0_0 ]  (192.0,155.0) -- (142.0,155.0) -- (142.0,55.0) -- (192.0,55.0) -- (194.0,55.0) ;
+\draw [line width=2.0pt, custcol_0_0_0 ]  (232.0,45.0) .. controls  (222.0,30.0)  ..  (202.0,30.0) .. controls  (210.0,45.0)  ..  (202.0,60.0) .. controls  (222.0,60.0)  ..  (232.0,45.0) -- cycle ;
+\draw [line width=2.0pt, custcol_0_0_0 ]  (192.0,30.0) .. controls  (200.0,45.0)  ..  (192.0,60.0) ;
+\draw [line width=3.0pt, custcol_0_0_0 ]  (92.0,95.0) -- (72.0,95.0) -- (72.0,15.0) -- (192.0,15.0) -- (192.0,25.0) -- (272.0,25.0) -- (274.0,25.0) ;
+\draw [line width=3.0pt, custcol_0_0_0 ]  (232.0,45.0) -- (272.0,45.0) -- (274.0,45.0) ;
+\draw [line width=2.0pt, custcol_0_0_0 ]  (312.0,35.0) .. controls  (302.0,20.0)  ..  (282.0,20.0) .. controls  (290.0,35.0)  ..  (282.0,50.0) .. controls  (302.0,50.0)  ..  (312.0,35.0) -- cycle ;
+\draw [line width=2.0pt, custcol_0_0_0 ]  (272.0,20.0) .. controls  (280.0,35.0)  ..  (272.0,50.0) ;
+\draw [line width=3.0pt, custcol_0_0_0 ]  (336.0,35.0) -- (333.0,35.0) ;
+\draw [line width=2.0pt, custcol_0_0_0 ]  (362.0,26.0) -- (372.0,35.0) -- (362.0,44.0) -- (338.0,44.0) -- (338.0,26.0) -- cycle;
+
+\logisimfontA{\fontsize{16pt}{16pt}\fontseries{bx}\selectfont\node[inner sep=0, outer sep=0, custcol_0_0_0, anchor=base west] at  (374.0,43.0)  {R};}
+\fill [line width=2.0pt, custcol_0_0_0]  (332.0,35.0) ellipse (2.0 and 2.0 );
+\draw [line width=2.0pt, custcol_0_0_0] (207.0,120.0) arc (90.0:-90.0:15.0 and 15.0 );
+\draw [line width=2.0pt, custcol_0_0_0 ]  (207.0,90.0) -- (193.0,90.0) -- (193.0,120.0) -- (207.0,120.0) ;
+\draw [line width=2.0pt, custcol_0_0_0] (207.0,160.0) arc (90.0:-90.0:15.0 and 15.0 );
+\draw [line width=2.0pt, custcol_0_0_0 ]  (207.0,130.0) -- (193.0,130.0) -- (193.0,160.0) -- (207.0,160.0) ;
+\draw [line width=2.0pt, custcol_0_0_0] (207.0,200.0) arc (90.0:-90.0:15.0 and 15.0 );
+\draw [line width=2.0pt, custcol_0_0_0 ]  (207.0,170.0) -- (193.0,170.0) -- (193.0,200.0) -- (207.0,200.0) ;
+\draw [line width=2.0pt, custcol_0_0_0 ]  (106.0,95.0) -- (93.0,89.0) -- (93.0,101.0) -- cycle;
+\draw [line width=2.0pt, custcol_0_0_0]  (109.0,95.0) ellipse (3.0 and 3.0 );
+\fill [line width=2.0pt, custcol_0_0_0]  (112.0,95.0) ellipse (2.0 and 2.0 );
+\fill [line width=2.0pt, custcol_0_0_0]  (92.0,95.0) ellipse (2.0 and 2.0 );
+\draw [line width=3.0pt, custcol_0_0_0 ]  (222.0,105.0) -- (262.0,105.0) -- (262.0,135.0) -- (272.0,135.0) -- (274.0,135.0) ;
+\draw [line width=3.0pt, custcol_0_0_0 ]  (222.0,145.0) -- (272.0,145.0) -- (275.0,145.0) ;
+\draw [line width=3.0pt, custcol_0_0_0 ]  (222.0,185.0) -- (262.0,185.0) -- (262.0,155.0) -- (272.0,155.0) -- (274.0,155.0) ;
+\draw [line width=2.0pt, custcol_0_0_0 ]  (302.0,145.0) .. controls  (292.0,130.0)  ..  (272.0,130.0) .. controls  (280.0,145.0)  ..  (272.0,160.0) .. controls  (292.0,160.0)  ..  (302.0,145.0) -- cycle ;
+\draw [line width=3.0pt, custcol_0_0_0 ]  (336.0,145.0) -- (333.0,145.0) ;
+\draw [line width=2.0pt, custcol_0_0_0 ]  (362.0,136.0) -- (372.0,145.0) -- (362.0,154.0) -- (338.0,154.0) -- (338.0,136.0) -- cycle;
+
+\logisimfontA{\fontsize{16pt}{16pt}\fontseries{bx}\selectfont\node[inner sep=0, outer sep=0, custcol_0_0_0, anchor=base west] at  (374.0,153.0)  {Pout};}
+\fill [line width=2.0pt, custcol_0_0_0]  (332.0,145.0) ellipse (2.0 and 2.0 );
+\end{tikzpicture}
+

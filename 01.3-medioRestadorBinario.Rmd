@@ -1,0 +1,39 @@
+## Medio Restador Binario
+Definimos el caso de un restador de 1 bit utilizando el concepto de *prestamo*
+
+```{r , echo=F}
+library(kableExtra)
+
+A <- c(0,0,1,1)
+B <- c(0,1,0,1)
+Prestamo <- c(0,1,0,0)
+R <- c(0,1,1,0)
+
+tabla <- data.frame(A, B, Prestamo, R)
+
+kable(tabla) %>% 
+  kable_styling("striped", full_width = F) %>%
+  add_header_above(c("Entrada"=2, "Salida"=2))
+```
+
+### Función booleana mediante minitérminos e implementación
+
+\begin{aligned}
+S(A, B) &=& \sum m(1,2)\\
+        &=& m_1+ m_1\\
+        &=& \bar{A}B + A\bar{B}\\
+        &=& A \oplus B\\
+\end{aligned}
+
+\begin{aligned}
+P(A, B) &=& \sum m(1)\\
+        &=& m_1\\
+        &=& \bar{A}B\\
+\end{aligned}
+
+Luego la implementación mediante puertas lógicas es tan simple como:
+
+```{r, echo=FALSE, fig.align='center',fig.cap="Circuito equivalente para restador binario utilizando función de prestamo", out.width="60%"}
+knitr::include_graphics("./images/circuito restador simple.svg")
+```
+

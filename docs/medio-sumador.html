@@ -24,7 +24,7 @@
 <meta name="author" content="Josué Meneses Díaz" />
 
 
-<meta name="date" content="2021-07-21" />
+<meta name="date" content="2021-07-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -82,8 +82,20 @@
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="medio-sumador.html"><a href="medio-sumador.html#entradas-y-salidas"><i class="fa fa-check"></i><b>2.1.1</b> Entradas y salidas</a></li>
 <li class="chapter" data-level="2.1.2" data-path="medio-sumador.html"><a href="medio-sumador.html#tabla-de-verdad"><i class="fa fa-check"></i><b>2.1.2</b> Tabla de verdad</a></li>
+<li class="chapter" data-level="2.1.3" data-path="medio-sumador.html"><a href="medio-sumador.html#función-booleana-mediante-minitérminos-e-implementación"><i class="fa fa-check"></i><b>2.1.3</b> Función booleana mediante minitérminos e implementación</a></li>
+<li class="chapter" data-level="2.1.4" data-path="medio-sumador.html"><a href="medio-sumador.html#función-booleana-mediante-maxitérminos-e-implementación"><i class="fa fa-check"></i><b>2.1.4</b> Función booleana mediante maxitérminos e implementación</a></li>
+<li class="chapter" data-level="2.1.5" data-path="medio-sumador.html"><a href="medio-sumador.html#función-booleana-mediante-k-map"><i class="fa fa-check"></i><b>2.1.5</b> Función booleana mediante k-map</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="sumador-completo.html"><a href="sumador-completo.html"><i class="fa fa-check"></i><b>2.2</b> Sumador completo</a></li>
+<li class="chapter" data-level="2.3" data-path="medio-restador-binario.html"><a href="medio-restador-binario.html"><i class="fa fa-check"></i><b>2.3</b> Medio Restador Binario</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="medio-restador-binario.html"><a href="medio-restador-binario.html#función-booleana-mediante-minitérminos-e-implementación-1"><i class="fa fa-check"></i><b>2.3.1</b> Función booleana mediante minitérminos e implementación</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="restador-completo.html"><a href="restador-completo.html"><i class="fa fa-check"></i><b>2.4</b> Restador completo</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="restador-completo.html"><a href="restador-completo.html#circuito"><i class="fa fa-check"></i><b>2.4.1</b> Circuito</a></li>
+<li class="chapter" data-level="2.4.2" data-path="restador-completo.html"><a href="restador-completo.html#conexión-en-cascada"><i class="fa fa-check"></i><b>2.4.2</b> Conexión en cascada</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a></li>
 <li class="chapter" data-level="4" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>4</b> Applications</a>
@@ -127,8 +139,8 @@
   \max\{nbit(A), nbit(B)\}+1
 \]</span> Para este caso, el máximo número de bits entre <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> será 1 por lo que en la salida tendremos, a lo más, dos bits:</p>
 <ul>
-<li><span class="math inline">\(Y\)</span></li>
-<li><span class="math inline">\(Ac_{out}\)</span></li>
+<li>El resultado de la suma mediante la función <span class="math inline">\(S\)</span></li>
+<li>El acarreo de salida mediante la función <span class="math inline">\(A_{out}\)</span></li>
 </ul>
 </div>
 <div id="tabla-de-verdad" class="section level3" number="2.1.2">
@@ -139,8 +151,8 @@
 <tr class="header">
 <th align="center">A</th>
 <th align="center">B</th>
-<th align="center">Y</th>
-<th align="center"><span class="math inline">\(Ac_{out}\)</span></th>
+<th align="center">S</th>
+<th align="center"><span class="math inline">\(A_{out}\)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -170,81 +182,54 @@
 </tr>
 </tbody>
 </table>
-<p>Prueba de tabla de verdad usando kableExtra</p>
-<pre><code>## Loading required package: knitr</code></pre>
-<pre><code>## Loading required package: kableExtra</code></pre>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:center;">
-var1
-</th>
-<th style="text-align:center;">
-var2
-</th>
-<th style="text-align:center;">
-var3
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center;">
-1
-</td>
-<td style="text-align:center;">
-a
-</td>
-<td style="text-align:center;">
-f
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-2
-</td>
-<td style="text-align:center;">
-b
-</td>
-<td style="text-align:center;">
-b
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-3
-</td>
-<td style="text-align:center;">
-c
-</td>
-<td style="text-align:center;">
-g
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-3
-</td>
-<td style="text-align:center;">
-c
-</td>
-<td style="text-align:center;">
-h
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-4
-</td>
-<td style="text-align:center;">
-e
-</td>
-<td style="text-align:center;">
-i
-</td>
-</tr>
-</tbody>
-</table>
+</div>
+<div id="función-booleana-mediante-minitérminos-e-implementación" class="section level3" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> Función booleana mediante minitérminos e implementación</h3>
+<span class="math display">\[\begin{aligned}
+S(A, B) &amp;=&amp; \sum m(1,2)\\
+        &amp;=&amp; m_1+m_2\\
+        &amp;=&amp; \bar{A} B + A \bar{B}\\
+\end{aligned}\]</span>
+<p>Esta última es equivalente a la puerta lógica XOR (Puerta or exclusiva)</p>
+<p><span class="math display">\[
+S(A, B) = A\oplus B
+\]</span></p>
+La salida <span class="math inline">\(A_{out\)</span> para el acarreo de salida será
+<span class="math display">\[\begin{aligned}
+   A_{out} &amp;=&amp; AB\\
+\end{aligned}\]</span>
+</div>
+<div id="función-booleana-mediante-maxitérminos-e-implementación" class="section level3" number="2.1.4">
+<h3><span class="header-section-number">2.1.4</span> Función booleana mediante maxitérminos e implementación</h3>
+<span class="math display">\[\begin{aligned}
+S(A, B) &amp;=&amp; \prod M(0,3)\\
+        &amp;=&amp; M_0\cdot M_3\\
+        &amp;=&amp; (A+B)⋅(\bar{A}+\bar{B})\\
+\end{aligned}\]</span>
+La salida <span class="math inline">\(A_{out}\)</span> para el acarreo de salida será
+<span class="math display">\[\begin{aligned}
+   A_{out} &amp;=&amp; \prod M(0,1,2)\\
+           &amp;=&amp; M_1\cdot M_2 \cdot M_3\\
+           &amp;=&amp; (A+B)(A+\bar{B})(\bar{A}+B)\\
+           &amp;=&amp; (A+B)(A\bar{A}+AB+\bar{A}\bar{B}+B\bar{B})\\ 
+           &amp;=&amp; (A+B)(AB+\bar{A}\bar{B})\\ 
+           &amp;=&amp; AAB+A\bar{A}\bar{B}+ABB+\bar{A}B\bar{B}\\ 
+           &amp;=&amp; AB+AB\\ 
+           &amp;=&amp; AB\\ 
+\end{aligned}\]</span>
+</div>
+<div id="función-booleana-mediante-k-map" class="section level3" number="2.1.5">
+<h3><span class="header-section-number">2.1.5</span> Función booleana mediante k-map</h3>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="images/kmap%20medio%20sumador.svg" alt="Mapas de Karnaugh para el circuto de medio sumador binario" width="50%" />
+<p class="caption">
+Figure 2.1: Mapas de Karnaugh para el circuto de medio sumador binario
+</p>
+</div>
+<p>TODO:</p>
+<ul>
+<li>Circuito equivalentes</li>
+</ul>
 
 </div>
 </div>
