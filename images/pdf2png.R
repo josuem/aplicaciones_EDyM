@@ -1,4 +1,5 @@
 setwd("D:/drive/aplicaciones_EDyM/images")
+# setwd("~/Josué/tmp_ulab3/aplicaciones_EDyM/images")
 
 eps2png <- function(file){
   # -dNOPAUSE -dQUIET -dBATCH

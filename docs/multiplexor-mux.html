@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.1 Medio Sumador | Aplicaciones de electrónica digital</title>
+  <title>2.5 Multiplexor (MUX) | Aplicaciones de electrónica digital</title>
   <meta name="description" content="Diversas aplicaciones de electrónica digital" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.1 Medio Sumador | Aplicaciones de electrónica digital" />
+  <meta property="og:title" content="2.5 Multiplexor (MUX) | Aplicaciones de electrónica digital" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.1 Medio Sumador | Aplicaciones de electrónica digital" />
+  <meta name="twitter:title" content="2.5 Multiplexor (MUX) | Aplicaciones de electrónica digital" />
   
   <meta name="twitter:description" content="Diversas aplicaciones de electrónica digital" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="intro.html"/>
-<link rel="next" href="sumador-completo.html"/>
+<link rel="prev" href="restador-completo.html"/>
+<link rel="next" href="methods.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -129,121 +129,193 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="medio-sumador" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Medio Sumador</h2>
-<p>Se conoce como medio sumador al circuito combinacional que permite realizar la operación se suma aritmética entre dos números binarios enteros <em>considerando solamente un acarreo de salida</em>.</p>
-<div id="entradas-y-salidas" class="section level3" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> Entradas y salidas</h3>
-<p>El circuito posee dos posibles entradas:</p>
-<ul>
-<li><span class="math inline">\(A\)</span></li>
-<li><span class="math inline">\(B\)</span></li>
-</ul>
-<p>Recordando que el número máximo de bit en la salida de un sumador es igual a <span class="math display">\[
-  \max\{nbit(A), nbit(B)\}+1
-\]</span> Para este caso, el máximo número de bits entre <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> será 1 por lo que en la salida tendremos, a lo más, dos bits:</p>
-<ul>
-<li>El resultado de la suma mediante la función <span class="math inline">\(S\)</span></li>
-<li>El acarreo de salida mediante la función <span class="math inline">\(A_{out}\)</span></li>
-</ul>
-</div>
-<div id="tabla-de-verdad" class="section level3" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> Tabla de verdad</h3>
-<table>
-<caption>Tabla de verdad para el circuito de medio sumador binario.</caption>
+<div id="multiplexor-mux" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Multiplexor (MUX)</h2>
+<p>El circuito Multiplexor tiene como finalidad conectar <strong>una de las multiples entradas</strong> del circuito a la salida <span class="math inline">\(Y\)</span>, en otras palabras, los Multiplexores son switches digitales. La elección de que linea de entrada será conectada con la salida del circuito es realizada mediante unas entradas llamadas “lineas de selección.” Normalmente, los MUX poseen <span class="math inline">\(2^n\)</span> lineas de entrada y <span class="math inline">\(n\)</span> lineas de selección. Las entradas de selección utilizan la numeración binaria para seleccionar la entrada a conectar.</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">S</th>
-<th align="center"><span class="math inline">\(A_{out}\)</span></th>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Entrada
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Salida
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:right;">
+I0
+</th>
+<th style="text-align:right;">
+I1
+</th>
+<th style="text-align:right;">
+S
+</th>
+<th style="text-align:right;">
+Y
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
 </tr>
-<tr class="even">
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
 </tr>
-<tr class="odd">
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
+<tr>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
 </tr>
-<tr class="even">
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
+<tr>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
 </tbody>
 </table>
-</div>
-<div id="función-booleana-mediante-minitérminos-e-implementación" class="section level3" number="2.1.3">
-<h3><span class="header-section-number">2.1.3</span> Función booleana mediante minitérminos e implementación</h3>
 <span class="math display">\[\begin{aligned}
-S(A, B) &amp;=&amp; \sum m(1,2)\\
-        &amp;=&amp; m_1+m_2\\
-        &amp;=&amp; \bar{A} B + A \bar{B}\\
+  Y &amp;=&amp; \bar{I_0}I_1 S + I_0\bar{I_1}\bar{S}+I_0I_1\bar{S}+I_0I_1S\\
+    &amp;=&amp; I_1S(I_0\bar{I_0})+I_0\bar{S}(I_1\bar{I_1})\\
+    &amp;=&amp; I_1S+I_0\bar{S}\\
 \end{aligned}\]</span>
-<p>Esta última es equivalente a la puerta lógica XOR (Puerta or exclusiva)</p>
-<p><span class="math display">\[
-S(A, B) = A\oplus B
-\]</span></p>
-La salida <span class="math inline">\(A_{out\)</span> para el acarreo de salida será
-<span class="math display">\[\begin{aligned}
-   A_{out} &amp;=&amp; AB\\
-\end{aligned}\]</span>
-</div>
-<div id="función-booleana-mediante-maxitérminos-e-implementación" class="section level3" number="2.1.4">
-<h3><span class="header-section-number">2.1.4</span> Función booleana mediante maxitérminos e implementación</h3>
-<span class="math display">\[\begin{aligned}
-S(A, B) &amp;=&amp; \prod M(0,3)\\
-        &amp;=&amp; M_0\cdot M_3\\
-        &amp;=&amp; (A+B)⋅(\bar{A}+\bar{B})\\
-\end{aligned}\]</span>
-La salida <span class="math inline">\(A_{out}\)</span> para el acarreo de salida será
-<span class="math display">\[\begin{aligned}
-   A_{out} &amp;=&amp; \prod M(0,1,2)\\
-           &amp;=&amp; M_1\cdot M_2 \cdot M_3\\
-           &amp;=&amp; (A+B)(A+\bar{B})(\bar{A}+B)\\
-           &amp;=&amp; (A+B)(A\bar{A}+AB+\bar{A}\bar{B}+B\bar{B})\\ 
-           &amp;=&amp; (A+B)(AB+\bar{A}\bar{B})\\ 
-           &amp;=&amp; AAB+A\bar{A}\bar{B}+ABB+\bar{A}B\bar{B}\\ 
-           &amp;=&amp; AB+AB\\ 
-           &amp;=&amp; AB\\ 
-\end{aligned}\]</span>
-</div>
-<div id="función-booleana-mediante-k-map" class="section level3" number="2.1.5">
-<h3><span class="header-section-number">2.1.5</span> Función booleana mediante k-map</h3>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
-<img src="images/kmap%20medio%20sumador.svg" alt="Mapas de Karnaugh para el circuto de medio sumador binario" width="50%" />
+<div class="figure" style="text-align: center"><span id="fig:mux1bit"></span>
+<img src="images/circMux1bits.png" alt="Circuito Multiplexor de 1 bit." width="60%" />
 <p class="caption">
-Figure 2.1: Mapas de Karnaugh para el circuto de medio sumador binario
+Figure 2.5: Circuito Multiplexor de 1 bit.
 </p>
 </div>
+<blockquote>
 <p>TODO:</p>
+</blockquote>
+<blockquote>
 <ul>
-<li>Circuito equivalentes</li>
+<li>Agregar símbolo equivalente</li>
 </ul>
+</blockquote>
+<div id="implementación-de-entrada-habilitante" class="section level3" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Implementación de entrada habilitante</h3>
+<p>Una de las extensión más interesantes de este circuito combinacional es la adición de una entrada habilitante, generalmente denominada como entrada <span class="math inline">\(E\)</span> (enable) que permite activar/desactivar el MUX. Una forma de implementar esta entrada sería realizar el procedimiento típico de diseñar una tabla de verdad, ahora con 4 entradas, encontrar la función booleana e implementar el circuito, pero existe otra forma más intuitiva que veremos a continuación.</p>
+<p>Consideremos el circuito de la figura <a href="multiplexor-mux.html#fig:mux1bit">2.5</a>, vemos que tanto la entrada <span class="math inline">\(I_0\)</span> como la entrada <span class="math inline">\(I_1\)</span> se encuentran conectadas a dos puertas AND antes de ser sumadas mediante la puerta final OR. En general, las puertas AND (como su nombre lo indican) pueden ser utilizadas como puertas habilitantes ya que, si una de sus entradas es cero, entonces si salida siempre será cero, independiente de los otros valores de entrada en la puerta. De esta forma, si ampliamos el número de entradas en cada una de las puertas AND de 2 a 3 podemos utilizar esta nueva entrada para habilitar/deshabilitar el circuito globalmente. En la figura <a href="multiplexor-mux.html#fig:mux1bitE">2.6</a></p>
+<div class="figure" style="text-align: center"><span id="fig:mux1bitE"></span>
+<img src="images/circMux1bitsE.png" alt="Circuito MUX de 1 bit con entrada habilitante" width="60%" />
+<p class="caption">
+Figure 2.6: Circuito MUX de 1 bit con entrada habilitante
+</p>
+</div>
 
 </div>
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sumador-completo.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="restador-completo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

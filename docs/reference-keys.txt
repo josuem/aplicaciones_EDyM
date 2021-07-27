@@ -2,6 +2,8 @@ fig:unnamed-chunk-1
 fig:unnamed-chunk-3
 fig:unnamed-chunk-5
 fig:unnamed-chunk-6
+fig:mux1bit
+fig:mux1bitE
 introducción
 intro
 medio-sumador
@@ -16,6 +18,8 @@ función-booleana-mediante-minitérminos-e-implementación-1
 restador-completo
 circuito
 conexión-en-cascada
+multiplexor-mux
+implementación-de-entrada-habilitante
 methods
 applications
 example-one
